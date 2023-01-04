@@ -12,7 +12,7 @@ class Space(StrEnum):
     SEED = "."
     FLOWER = "*"
 
-class Turn(StrEnum):
+class Player(StrEnum):
     DANDELION = "Dandelion"
     WIND = "Wind"
 
@@ -111,8 +111,8 @@ class DandelionGame:
         for c in range(0, 5):
             for r in range(0, 5):
                 if self.grid[c][r] is Space.EMPTY:
-                    return Turn.WIND
-        return Turn.DANDELION
+                    return Player.WIND
+        return Player.DANDELION
         
 if __name__ == "__main__":
     import sys
